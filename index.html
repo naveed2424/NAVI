@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="AI5M8f3ekFXNXe6T0f9eKCjkJJY9777CITc5Sn0MQwg" />
     <title>NAVI — Recipes Made With Love. Memories Shared Around the Table.</title>
     <meta name="description" content="NAVI is an international home-cooking magazine where food, family traditions, memories, cultures and simple homemade recipes come together." />
     <meta property="og:title" content="NAVI — Recipes Made With Love. Memories Shared Around the Table." />
@@ -10,6 +11,44 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="author" content="Naveed Afzal" />
+
+    <!-- Defensive compatibility handler for browser extensions intercepting fetch -->
+    <script>
+      (function() {
+        try {
+          var _fetch = window.fetch;
+          var proto = window;
+          var desc;
+          while (proto) {
+            desc = Object.getOwnPropertyDescriptor(proto, 'fetch');
+            if (desc) break;
+            proto = Object.getPrototypeOf(proto);
+          }
+          if (!desc || !desc.set || !desc.writable) {
+            Object.defineProperty(window, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              get: function() {
+                return _fetch;
+              },
+              set: function(newFetch) {
+                _fetch = newFetch;
+              }
+            });
+          }
+        } catch (err) {
+          // Fallback if property definition is restricted
+        }
+
+        // Prevent external extension errors from breaking the page
+        window.addEventListener('error', function(e) {
+          if (e.filename && e.filename.indexOf('chrome-extension://') !== -1) {
+            e.preventDefault();
+          }
+        });
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
