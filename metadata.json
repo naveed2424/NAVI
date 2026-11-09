@@ -1,0 +1,6 @@
+{
+  "name": "NAVI Food Magazine & Recipes",
+  "description": "Recipes Made With Love. Memories Shared Around the Table. International home-cooking magazine, holiday editions, and authentic recipes from around the world.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
